@@ -23,4 +23,6 @@ All experiments are conducted using MATLAB r2018a.
 <img src="https://github.com/Spikebybike/TD-TVecA-TD-TCTA/blob/main/pic/non-uniform_row_undersample.png" width="700px">
 
 ## The code in coming soon
-- 'main' example of rma imaging
+A working example for RMA 2D imaging, using a range slice of the fire truck model.
+
+Remaining components and experiments will be released in subsequent updates. 
