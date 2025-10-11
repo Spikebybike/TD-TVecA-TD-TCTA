@@ -48,11 +48,11 @@ figure;imagesc(abs(sarData));
 %% Matrix Completion  (TVecA/TCTA)
 
 % proposed TVecA        
-%R=80;   % pencil parameter
-%mu=2;           %penalty parameter
-%e_rank=R/4;     %e_rank
-%K=30;           %iterations
-%sarData=TVecA(sarData,R,mu,K,e_rank);
+% R=80;   % pencil parameter
+% mu=2;           %penalty parameter
+% e_rank=R/4;     %e_rank
+% K=30;           %iterations
+% sarData=TVecA(sarData,R,mu,K,e_rank);
 
 % proposed TCTA
 % P=10;  % pencil parameter
@@ -74,5 +74,6 @@ figure;imagesc(abs(sarData));
 rma_2d(dx,dy,k,z0,sarData,nFFTspace,amplitude,imSize); %imaging of one range slice 
 
 elapsedTime = toc ;
+
 
 
