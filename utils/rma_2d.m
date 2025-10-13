@@ -19,7 +19,7 @@ function rma_2d(dx,dy,k,z0,sarData,nFFTspace,amplitude,imSize)
 %% zero-padding
     [yPointM,xPointM] = size(sarData);
     [yPointF,xPointF] = size(phaseFactor1);
-    left=zeros(yPointM,floor((xPointF-xPointM)/2));%padding zeros around sardata 0     0     0 from ny nx to nfftsapace nfftspace
+    left=zeros(yPointM,floor((xPointF-xPointM)/2));%padding zeros around sardata 0     0     0 from ny nx to nfftspace nfftspace
     right=zeros(yPointM,ceil((xPointF-xPointM)/2));%                             0  sardata  0   
     top=zeros(floor((yPointF-yPointM)/2),xPointF);%                              0     0     0
     bottom=zeros(ceil((yPointF-yPointM)/2),xPointF);
