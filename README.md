@@ -1,6 +1,6 @@
 # TD-TVecA / TD-TCTA
 
-Code for ___Extreme Structured Sparse Millimeter-Wave 3-D SAR Imaging via Truncated-DCT and Toeplitz matrix methods___
+Code for ___Structured Sparse Millimeter-Wave 3-D SAR Imaging via Truncated-DCT and Toeplitz matrix methods___
 
 ## Workflow of TD-TVecA / TD-TCTA for sparse 3-D SAR imaging
 <img src="https://github.com/Spikebybike/TD-TVecA-TD-TCTA/blob/main/pic/proposed%20workflow.png" width="700px">
