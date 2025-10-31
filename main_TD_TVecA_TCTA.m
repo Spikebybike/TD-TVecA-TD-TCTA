@@ -50,7 +50,7 @@ figure;imagesc(abs(sarData));
 % proposed TVecA        
 % R=80;   % pencil parameter
 % mu=2;           %penalty parameter
-% e_rank=R/4;     %e_rank
+% e_rank=20;     %e_rank
 % K=30;           %iterations
 % sarData=TVecA(sarData,R,mu,K,e_rank);
 
@@ -58,7 +58,7 @@ figure;imagesc(abs(sarData));
 % P=10;  % pencil parameter
 % Q=P;            % pencil parameter
 % mu=2;           %penalty parameter
-% e_rank=P+Q;     %e_rank 
+% e_rank=20;     %e_rank 
 % K=30;           %iterations
 % sarData=TCTA(sarData,P,Q,mu,K,e_rank);
 
@@ -74,6 +74,7 @@ figure;imagesc(abs(sarData));
 rma_2d(dx,dy,k,z0,sarData,nFFTspace,amplitude,imSize); %imaging of one range slice 
 
 elapsedTime = toc ;
+
 
 
 
