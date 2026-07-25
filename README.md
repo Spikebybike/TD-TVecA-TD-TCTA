@@ -7,6 +7,23 @@ This repository provides MATLAB implementations of two matrix-completion methods
 
 Both methods reconstruct sparsely sampled range slices before two-dimensional range migration algorithm (RMA) imaging.
 
+## Results
+
+<table>
+  <tr>
+    <td><img src="pics/full_echo.png" width="200"/></td>
+    <td><img src="pics/sparse_echo.png" width="200"/></td>
+    <td><img src="pics/reconstructed_echo_tcta.png" width="200"/></td>
+    <td><img src="pics/reconstructed_echo_tvnna.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="pics/full_image.png" width="200"/></td>
+    <td><img src="pics/sparse_image.png" width="200"/></td>
+    <td><img src="pics/reconstructed_image_tcta.png" width="200"/></td>
+    <td><img src="pics/reconstructed_image_tvnna.png" width="200"/></td>
+  </tr>
+</table>
+
 ## Related Papers
 
 1. Z. Tan, Z. Chen, Y. Liu, Z. Li, S. Gao, and Y. Liu, "Structured Sparse Millimeter-Wave 3-D SAR Imaging via Truncated-DCT and Toeplitz Matrix Methods," *IEEE Transactions on Aerospace and Electronic Systems*, vol. 62, 2026. DOI: [10.1109/TAES.2026.3686779](https://doi.org/10.1109/TAES.2026.3686779).
