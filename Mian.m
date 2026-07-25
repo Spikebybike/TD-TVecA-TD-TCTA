@@ -16,8 +16,8 @@ params=data.params;
 
 %% chose MC methods(TCTA/TVNNA)
 
-IS_TCTA  = 0;
-IS_TVNNA = 1;
+IS_TCTA  = 1;
+IS_TVNNA = 0;
 
 %% imaging parameters
 
@@ -46,7 +46,7 @@ amplitude=-40;                    % amplitude of [-40,0] dB after normalization
 
 % % uniform sparse
 
-masknum=2;mask([1:masknum:end],:)=1;                                                                          % row: 50%
+% masknum=2;mask([1:masknum:end],:)=1;                                                                          % row: 50%
 
 % masknum=4;mask([1:masknum:end],:)=1;                                                                          % row: 25%
 
@@ -60,7 +60,7 @@ masknum=2;mask([1:masknum:end],:)=1;                                            
 % mask([1,3,4,7,9,10,12,14,15,18,20,21,24,26,29,31,32,34,36,39,41,43,45,47,49, ...
 %     50,53,55,58,59,61,62,65,67,69,70,72,75,76,79,80,82,84,87,88,90,93,95,97,100],:)=1;                        % row 50%
 
-% mask([3,7,10,12,16,20,22,26,31,36,39,42,44,48,53,57,58,61,64,67,70,72,75,79,82,84,87,90,93,97],:)=1;          % row 30%
+mask([3,7,10,12,16,20,22,26,31,36,39,42,44,48,53,57,58,61,64,67,70,72,75,79,82,84,87,90,93,97],:)=1;          % row 30%
 
 % mask([7,11,15,22,27,32,36,39,42,45,48,51,53,57,61,65,68,71,75,78,81,84,88,93,96],:)=1;                        % row 25%
 
@@ -107,6 +107,8 @@ if IS_TCTA
     Q=P;                                                 % pencil parameter
     maxIter_K=30;                                        % iterations
     sarData=TCTA(sarData,P,Q,mu0,maxIter_K,e_rank);      % toeplitz-column-toeplitz ADMM (TCTA)
+    figure;imagesc(abs(sarData));axis square;colormap('jet');
+    title 'Reconstructed SAR Echo After MC(TCTA)';
 end
 
 if IS_TVNNA
@@ -116,10 +118,9 @@ if IS_TVNNA
     maxIter=100;                                         % iterations
     tol=1e-6;                                            % tolerance
     sarData=TVNNA(sarData,lambda,rho,mu1,maxIter,tol);   % Total Variation and Nuclear Norm ADMM (TVNNA)
+    figure;imagesc(abs(sarData));axis square;colormap('jet');
+    title 'Reconstructed SAR Echo After MC(TVNNA)';
 end
-
-figure;imagesc(abs(sarData));axis square;colormap('jet');
-title 'Reconstructed SAR Echo After MC(TCTA/TVNNA)';
 
 %% rma 2d imaging
 
