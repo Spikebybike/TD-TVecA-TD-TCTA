@@ -15,8 +15,9 @@ xyz=data.slice_xyz;                                                   % dx dy an
 params=data.params;
 
 %% chose MC methods(TCTA/TVNNA)
-IS_TCTA=0;
-IS_TVNNA=1;
+
+IS_TCTA  = 0;
+IS_TVNNA = 1;
 
 %% imaging parameters
 
@@ -33,19 +34,23 @@ k = 2*pi*f0/c;                    % wave number
 imSize =400;                      % image size at mm
 amplitude=-40;                    % amplitude of [-40,0] dB after normalization
 
-%% mask of different sparse sampling
+%% mask of different sparse sampling pattern
 
 [M,N]= size(sarData);mask=zeros(M,N);
 
 %% random sparse
 
-samp_rate = 0.2; chosen = randperm(M*N,round(samp_rate*M*N)); mask(chosen)=1;                                 % random: 20%
+% samp_rate = 0.2; chosen = randperm(M*N,round(samp_rate*M*N)); mask(chosen)=1;                                 % random: 20%
 
 %% structured sparse
 
 % % uniform sparse
 
+masknum=2;mask([1:masknum:end],:)=1;                                                                          % row: 50%
+
 % masknum=4;mask([1:masknum:end],:)=1;                                                                          % row: 25%
+
+% masknum=2;mask(:,[1:masknum:end])=1;                                                                          % column: 50%
 
 % masknum=4;mask(:,[1:masknum:end])=1;                                                                          % column: 25%
 
@@ -96,12 +101,12 @@ maxMod=max(abs(sarData(:)));sarData=sarData/maxMod;          % normalization
 %% matrix completion(TCTA/TVNNA)
 
 if IS_TCTA
-    mu0=2;                                    % ADMM penalty parameter
-    e_rank=20;                                % e_rank
-    P=e_rank/2;                               % pencil parameter
-    Q=P;                                      % pencil parameter
-    K=30;                                     % iterations
-    sarData=TCTA(sarData,P,Q,mu0,K,e_rank);   % toeplitz-column-toeplitz ADMM (TCTA)
+    mu0=2;                                               % ADMM penalty parameter
+    e_rank=20;                                           % e_rank
+    P=e_rank/2;                                          % pencil parameter
+    Q=P;                                                 % pencil parameter
+    maxIter_K=30;                                        % iterations
+    sarData=TCTA(sarData,P,Q,mu0,maxIter_K,e_rank);      % toeplitz-column-toeplitz ADMM (TCTA)
 end
 
 if IS_TVNNA

@@ -1,3 +1,18 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Supporting Function RMA_2D for mmWave 3-D SAR Imaging
+%%% Reconstructs one range slice with the 2-D range migration algorithm (RMA).
+%%% 2026-7-25
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------------------------------------------------------
+% Input:  dx,dy: scan intervals in the horizontal and vertical directions (mm)
+%         k: carrier wavenumber; its unit must be consistent with z0
+%         z0: propagation distance from the aperture plane to the selected range slice
+%         sarData: complex M-by-N range-compressed SAR echo slice
+%         nFFTspace: square spatial FFT size used for zero padding and RMA
+%         amplitude: lower display limit of the normalized image (dB)
+%         imSize: side length of the displayed image region (mm)
+% Output: finalsar: normalized, clipped 2-D RMA magnitude image in dB
+%-------------------------------------------------------------------
 function finalsar=RMA_2D(dx,dy,k,z0,sarData,nFFTspace,amplitude,imSize)
 %% phase creating
 wSx = 2*pi/(dx*1e-3);                                    % Sampling frequency for Target Domain
