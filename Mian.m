@@ -16,8 +16,8 @@ params=data.params;
 
 %% chose MC methods(TCTA/TVNNA)
 
-IS_TCTA  = 1;
-IS_TVNNA = 0;
+IS_TCTA  = 0;
+IS_TVNNA = 1;
 
 %% imaging parameters
 
