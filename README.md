@@ -41,7 +41,7 @@ Both methods reconstruct sparsely sampled range slices before two-dimensional ra
 2. Run the main script:
 
    ```matlab
-   Mian
+   Main
    ```
 
 3. Select one completion method in `Main.m`:
