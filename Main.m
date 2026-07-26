@@ -16,8 +16,7 @@ params=data.params;
 
 %% chose MC methods(TCTA/TVNNA)
 
-IS_TCTA  = 0;
-IS_TVNNA = 1;
+IS_TCTA_OR_TVNNA = 1;   % tcta==1,tvnna=2
 
 %% imaging parameters
 
@@ -100,7 +99,7 @@ maxMod=max(abs(sarData(:)));sarData=sarData/maxMod;          % normalization
 
 %% matrix completion(TCTA/TVNNA)
 
-if IS_TCTA
+if IS_TCTA_OR_TVNNA==1
     mu0=2;                                               % ADMM penalty parameter
     e_rank=20;                                           % e_rank
     P=e_rank/2;                                          % pencil parameter
@@ -109,9 +108,7 @@ if IS_TCTA
     sarData=TCTA(sarData,P,Q,mu0,maxIter_K,e_rank);      % toeplitz-column-toeplitz ADMM (TCTA)
     figure;imagesc(abs(sarData));axis square;colormap('jet');
     title 'Reconstructed SAR Echo After MC(TCTA)';
-end
-
-if IS_TVNNA
+elseif IS_TCTA_OR_TVNNA==2
     lambda=1/percent;                                    % smoothness parameter
     rho=1;                                               % ADMM penalty parameter
     mu1=1.25;                                            % penalty parameter multiplier

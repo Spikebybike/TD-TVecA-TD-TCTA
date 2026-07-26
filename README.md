@@ -47,15 +47,13 @@ Both methods reconstruct sparsely sampled range slices before two-dimensional ra
 3. Select one completion method in `Main.m`:
 
    ```matlab
-   IS_TCTA = 1;
-   IS_TVNNA = 0;
+   IS_TCTA_OR_TVNNA = 1;   % TCTA
    ```
 
    or
 
    ```matlab
-   IS_TCTA = 0;
-   IS_TVNNA = 1;
+   IS_TCTA_OR_TVNNA = 2;   % TVNNA
    ```
 
 4. Choose a sampling mask in the sparse-sampling section of `Main.m`, then run the script. It displays the fully sampled echo, sparse echo, completed echo, and reconstructed 2-D RMA image.
