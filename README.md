@@ -24,7 +24,7 @@ Both methods reconstruct sparsely sampled range slices before two-dimensional ra
   </tr>
 </table>
 
-## Related Papers
+## Our Related Papers
 
 1. Z. Tan, Z. Chen, Y. Liu, Z. Li, S. Gao, and Y. Liu, "Structured Sparse Millimeter-Wave 3-D SAR Imaging via Truncated-DCT and Toeplitz Matrix Methods," *IEEE Transactions on Aerospace and Electronic Systems*, vol. 62, 2026. DOI: [10.1109/TAES.2026.3686779](https://doi.org/10.1109/TAES.2026.3686779).
 
