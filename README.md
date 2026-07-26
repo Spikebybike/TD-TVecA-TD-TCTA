@@ -44,7 +44,7 @@ Both methods reconstruct sparsely sampled range slices before two-dimensional ra
    Mian
    ```
 
-3. Select one completion method in `Mian.m`:
+3. Select one completion method in `Main.m`:
 
    ```matlab
    IS_TCTA = 1;
@@ -58,13 +58,13 @@ Both methods reconstruct sparsely sampled range slices before two-dimensional ra
    IS_TVNNA = 1;
    ```
 
-4. Choose a sampling mask in the sparse-sampling section of `Mian.m`, then run the script. It displays the fully sampled echo, sparse echo, completed echo, and reconstructed 2-D RMA image.
+4. Choose a sampling mask in the sparse-sampling section of `Main.m`, then run the script. It displays the fully sampled echo, sparse echo, completed echo, and reconstructed 2-D RMA image.
 
 ## Project Structure
 
 ```text
 .
-|-- Mian.m                 main script for sampling, completion, and RMA imaging
+|-- Main.m                 main script for sampling, completion, and RMA imaging
 |-- sardata.mat            example SAR range-slice data
 |-- utils/
 |   |-- TCTA.m             Toeplitz-Column-Toeplitz ADMM completion
