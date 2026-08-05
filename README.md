@@ -24,12 +24,6 @@ Both methods reconstruct sparsely sampled range slices before two-dimensional ra
   </tr>
 </table>
 
-## Our Related Papers
-
-1. Z. Tan, Z. Chen, Y. Liu, Z. Li, S. Gao, and Y. Liu, "Structured Sparse Millimeter-Wave 3-D SAR Imaging via Truncated-DCT and Toeplitz Matrix Methods," *IEEE Transactions on Aerospace and Electronic Systems*, vol. 62, 2026. DOI: [10.1109/TAES.2026.3686779](https://doi.org/10.1109/TAES.2026.3686779).
-
-2. Z. Tan, Z. Chen, H. Tang, P. Mou, and Y. Liu, "Fast Structured Sparse Millimeter-Wave 3D SAR Imaging Based on Low-rank and Smooth Matrix Completion," *Journal of Radars*, 2026. DOI: [10.12000/JR25267](https://doi.org/10.12000/JR25267).
-
 ## Requirements
 
 - MATLAB R2018a or later
@@ -106,6 +100,15 @@ For `TCTA` and `TVNNA`, zero-valued entries in the input range slice are interpr
 
 - `dx` and `dy` are used in millimetres by `RMA_2D.m`.
 - Ensure that the wavenumber `k` and imaging distance `z0` use compatible units in RMA phase compensation.
+
+
+## Citation
+If you found our work useful, please consider citing the related papers:
+
+1. Z. Tan, Z. Chen, Y. Liu, Z. Li, S. Gao, and Y. Liu, "Structured Sparse Millimeter-Wave 3-D SAR Imaging via Truncated-DCT and Toeplitz Matrix Methods," *IEEE Transactions on Aerospace and Electronic Systems*, vol. 62, 2026. DOI: [10.1109/TAES.2026.3686779](https://doi.org/10.1109/TAES.2026.3686779).
+
+2. Z. Tan, Z. Chen, H. Tang, P. Mou, and Y. Liu, "Fast Structured Sparse Millimeter-Wave 3D SAR Imaging Based on Low-rank and Smooth Matrix Completion," *Journal of Radars*, 2026. DOI: [10.12000/JR25267](https://doi.org/10.12000/JR25267).
+
 
 ## License
 
