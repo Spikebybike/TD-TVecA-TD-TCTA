@@ -1,6 +1,6 @@
 # TCTA and TVNNA for Structured Sparse mmWave 3-D SAR Imaging
 
-This repository provides MATLAB implementations of two matrix-completion methods for structured sparse millimeter-wave (mmWave) three-dimensional synthetic aperture radar (SAR) imaging:
+This repository provides MATLAB implementations of two matrix-completion methods for structured sparse millimeter-wave (mmWave) synthetic aperture radar (SAR) imaging:
 
 - **TCTA**: Toeplitz-Column-Toeplitz ADMM matrix completion, which uses a two-level Toeplitz lifting and a low-rank factorized ADMM solver without singular value decomposition in the iterative updates.
 - **TVNNA**: a low-rank and smooth matrix-completion method that jointly uses total variation regularization and nuclear-norm minimization in an ADMM framework.
