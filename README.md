@@ -103,7 +103,7 @@ For `TCTA` and `TVNNA`, zero-valued entries in the input range slice are interpr
 
 
 ## Citation
-If you found our work useful, please consider citing the related papers:
+If you found my work useful, please consider citing the related papers:
 
 1. Z. Tan, Z. Chen, Y. Liu, Z. Li, S. Gao, and Y. Liu, "Structured Sparse Millimeter-Wave 3-D SAR Imaging via Truncated-DCT and Toeplitz Matrix Methods," *IEEE Transactions on Aerospace and Electronic Systems*, vol. 62, 2026. DOI: [10.1109/TAES.2026.3686779](https://doi.org/10.1109/TAES.2026.3686779).
 
