@@ -105,9 +105,9 @@ For `TCTA` and `TVNNA`, zero-valued entries in the input range slice are interpr
 ## Citation
 If you found my work useful, please consider citing the related papers:
 
-1. Z. Tan, Z. Chen, Y. Liu, Z. Li, S. Gao, and Y. Liu, "Structured Sparse Millimeter-Wave 3-D SAR Imaging via Truncated-DCT and Toeplitz Matrix Methods," *IEEE Transactions on Aerospace and Electronic Systems*, vol. 62, 2026. DOI: [10.1109/TAES.2026.3686779](https://doi.org/10.1109/TAES.2026.3686779).
+1. **Zhuohang Tan, Zeyu Chen, Yiyi Liu, Zhi Li, Shaobing Gao, and Yiguang Liu**, "Structured Sparse Millimeter-Wave 3-D SAR Imaging via Truncated-DCT and Toeplitz Matrix Methods," *IEEE Transactions on Aerospace and Electronic Systems*, vol. 62, 2026. DOI: [10.1109/TAES.2026.3686779](https://doi.org/10.1109/TAES.2026.3686779).
 
-2. Z. Tan, Z. Chen, H. Tang, P. Mou, and Y. Liu, "Fast Structured Sparse Millimeter-Wave 3D SAR Imaging Based on Low-rank and Smooth Matrix Completion," *Journal of Radars*, 2026. DOI: [10.12000/JR25267](https://doi.org/10.12000/JR25267).
+2. **Zhuohang Tan, Zeyu Chen, Haojie Tang, Peng Mou, and Yiguang Liu**, "Fast Structured Sparse Millimeter-Wave 3D SAR Imaging Based on Low-rank and Smooth Matrix Completion," *Journal of Radars*, 2026. DOI: [10.12000/JR25267](https://doi.org/10.12000/JR25267).
 
 
 ## License
